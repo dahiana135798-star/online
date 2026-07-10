@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cine online</title>
+
+</head>
+<body>
+
+<!--Encabezado-->
+<header>
+    <h1>cine online hub</h1>
+    <p>salas, peliculas, series y videollamadas</p>
+</header>
+
+<!--menu-->
+<nav>
+    <ul>
+        <li><a href="#salas">salas</a></li>
+        <li><a href="#plataformas">plataforma</a></li>
+        <li><a href="#video">videos</a></li>
+        <li><a href="#chat">chat</a></li>
+		<li><a href="#Llamada">videollamada</a></li>
+    </ul>
+</nav>
+
+<main>
+
+        <!--crear sala-->
+        <section id="salas">
+            <h2>crear sala</h2>
+
+            <input
+                type="text"
+                id="nombreSala"
+                placeholder="Nombre de la sala">
+			
+            <button id="btnCrearSala">
+			crear sala
+		    </button>
+
+            <div id="infoSala"></div>
+        </section>
+
+        <!--participantes-->
+        <section id="participantes">
+          <h3>Participantes</h3>
+          <ul id="listaParticipantes"></ul>
+
+          <h3>Salas creadas</h3>
+         <ul id="listaSalas"></ul>
+
+            </ul>
+        </section>
+        <!--plataformas-->
+        <section id="plataformas">
+            <h2>plataformas</h2>
+ 
+            <div class="grid-apps">
+ 
+                <button class="app-btn" data-url="">
+                  hitv
+                </button>
+ 
+                <button class="app-btn" data-url="">
+                 GMMTV
+                </button>
+ 
+                <button class="app-btn" data-url="">
+                  pandrama
+                </button>
+ 
+                <button class="app-btn" data-url="">
+                youtube
+                </button>
+ 
+                <button class="app-btn" data-url="">
+                 neflix
+                 </button>
+ 
+                <button class="app-btn" data-url="">
+                 GAGA00LALA
+                </button>
+ 
+            </div>
+        </section>
+
+        <!--compartir enlaces-->
+        <section id="enlaces">
+             <h2>compartir enlaces</h2>
+
+             <input
+                 type="text"
+                 id="nombreApp"
+                 placeholder="Nombre de la aplicacion">
+ 
+             <input
+                 type="url"
+                 id="linkApp"
+                 placeholder="pegar enlace">
+
+             <button id="btnCompartir">
+             compartir
+             </button>
+ 
+            <div id="listaEnlaces"></div>
+        </section>
+ 
+        <!--reproductor mp4-->
+        <section id="video">
+            <h2>reproductor de video</h2>
+ 
+            <input
+                type="file"
+                id="archivoVideo"
+                accept="video/*">
+ 
+            <video
+                id="reproductor"
+                controls>
+            </video>
+        </section>
+ 
+        <!--youtube-->
+        <section id="youtube">
+            <h2>youtube</h2>
+	 
+	        <input
+	            type="text"
+	            id="youtubeLink"
+	            placeholder="pega un enlace de youtube">
+     
+	        <button id="btnYoutube">
+	        cargar video
+          	</button>
+	
+        	<div id="youtubeContainer"></div>
+        </section>
+
+        <!--chat-->
+        <section id="chat">
+            <h2>chat</h2>
+	
+	        <div id="chatBox">
+	
+	        </div>
+	
+	        <input
+	            type="text"
+		        id="mensaje"
+		        placeholder="escribe un mensaje">
+	        <button id="btnEnviar">
+	        enviar
+	        </button>
+        </section>
+
+        <!--videollamada-->
+        <section id="Llamada">
+            <h2>Videollamada</h2>
+	
+       	<div class="video-box">
+	         <h3>mi camara</h3>
+		
+		    <video
+		        id="videoLocal"
+			    autoplay
+			    muted
+			    playsinline>
+		    </video>
+	    </div>
+	    <div class="video-box">
+	         <h3>participante</h3>
+		 
+		    <video
+		        id="videoRemoto"
+			    autoplay
+			    playsinline>
+		    </video>
+	    </div>
+
+         <button id="btnCamara">
+         activar camara
+        </button>
+
+         <button id="btnMicrofono">
+         activar microfono
+        </button>
+	 
+	    <button id="btnLlamada">
+	    iniciar llamada
+	    </button>
+    </section>
+
+    <!--perfil-->
+    <section id="perfil">
+        <h2>perfil</h2>
+		
+	    <input
+	        type="text"
+		    id="usuario"
+		    placeholder="nombre de usuario">
+			
+	    <input 
+	        type="email"
+		    id="correo"
+		    placeholder="correo elctronico">
+	    <button id="btnGuardarPerfil">
+	    guardar perfil
+	    </button>
+	</section>
+	
+</main>
+
+<footer>
+    <p>
+	    cine online hub 2026
+	</p>
+</footer>
+
+<!--script-->
+  <script src="js/app.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/webrtc.js"></script>
+	<script src="js/perfil.js"></script>
+    <script type="module" src="js/firebase-chat.js"></script>
+	<script type="module" src="js/firebase-participantes.js"></script>
+	<script type="module" src="js/firebase-config.js"></script>
+	<script type="module" src="js/firebase-salas.js"></script>
+</body>
+</html>
